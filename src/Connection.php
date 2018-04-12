@@ -125,7 +125,8 @@ class Connection
 
         $writer->writeString(self::PASSWORD, $this->auth->getPassword());
         $writer->writeStop();
-
+        
+        echo (string) $writer;
         return (string) $writer;
     }
 
