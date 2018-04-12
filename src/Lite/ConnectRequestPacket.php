@@ -61,6 +61,7 @@ class ConnectRequestPacket extends BasePacket
         $this->remainingPacketLength = $data->length();
 
         parent::write($stream);
+        echo $data->getData();
         $stream->write($data->getData());
     }
 
