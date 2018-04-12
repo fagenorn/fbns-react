@@ -62,6 +62,7 @@ class ConnectRequestPacket extends BasePacket
 
         parent::write($stream);
         $stream->write($data->getData());
+        echo "\n";
         echo $stream;
     }
 
