@@ -100,6 +100,7 @@ class Lite implements EventEmitterInterface
         $this->client
             ->on('open', function () {
                 $this->logger->info('Connection has been established.');
+                 $this->logger->info('THIS IS A TEST.');
             })
             ->on('close', function () {
                 $this->logger->info('Network connection has been closed.');
