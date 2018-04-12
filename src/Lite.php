@@ -115,6 +115,7 @@ class Lite implements EventEmitterInterface
                 $this->emit('error', [$e]);
             })
             ->on('connect', function (ConnectResponsePacket $responsePacket) {
+                $this->logger->info('THIS IS A TEST TOO.');
                 $this->logger->info('Connected to a broker.');
                 $this->setKeepaliveTimer();
                 $this->emit('connect', [$responsePacket]);
