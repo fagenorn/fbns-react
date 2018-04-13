@@ -126,7 +126,6 @@ class Connection
         $writer->writeString(self::PASSWORD, $this->auth->getPassword());
         $writer->writeStop();
         
-        echo base64_encode((string) $writer);
         return (string) $writer;
     }
 
