@@ -62,11 +62,6 @@ class ConnectRequestPacket extends BasePacket
 
         parent::write($stream);
         $stream->write($data->getData());
-        
-        $bytes = unpack('H*', $stream);
-        echo "\n".'Connect bytes: ';      
-        echo implode(" ",$bytes);
-        echo "\n";
     }
 
     /**
