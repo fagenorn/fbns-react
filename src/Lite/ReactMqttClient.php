@@ -540,7 +540,7 @@ class ReactMqttClient extends EventEmitter
             $this->writtenFlow = array_shift($this->sendingFlows);
             $this->stream->write($this->writtenFlow->getPacket());
             
-                    $bytes = unpack('H*', this->writtenFlow->getPacket());
+                    $bytes = unpack('H*', $this->writtenFlow->getPacket());
                     echo "\n".'Connect bytes: ';      
                     echo implode(" ",$bytes);
                     echo "\n";
